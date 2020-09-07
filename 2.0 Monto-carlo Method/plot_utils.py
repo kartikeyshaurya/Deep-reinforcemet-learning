@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 
-def plot_blackjack_value(v):
+def plot_blackjack_values(v):
 
     def get_Z(x, y, usable_ace):
         if (x,y,usable_ace) in V:
