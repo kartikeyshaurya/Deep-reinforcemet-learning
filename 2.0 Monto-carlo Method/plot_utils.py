@@ -1,19 +1,18 @@
-import numpy as np 
-from mpl_toolkits.mplot3d import Axes3D 
-import matplotlib.pyplot as plt 
+import numpy as np
+from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 
-
-def plot_blackjack_values(v):
+def plot_blackjack_values(V):
 
     def get_Z(x, y, usable_ace):
         if (x,y,usable_ace) in V:
             return V[x,y,usable_ace]
         else:
             return 0
-    
-    def get_figure(usable_ace,ax):
-        x_range = np.arange(11,22)
+
+    def get_figure(usable_ace, ax):
+        x_range = np.arange(11, 22)
         y_range = np.arange(1, 11)
         X, Y = np.meshgrid(x_range, y_range)
         
